@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo de Propriedades CSS</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>📚 Guia Completo de Propriedades CSS</h1>
+            <p>Referência detalhada com valores e exemplos práticos</p>
+        </header>
+        
+        <main class="content">
+            <!-- Exemplo de Textarea -->
+            <section class="example-section">
+                <h2>📝 Exemplo Prático - Textarea Estilizado</h2>
+                <div class="example-box">
+                    <textarea class="demo-textarea" placeholder="Textarea com estilos aplicados conforme a tabela abaixo...">
+Esta textarea demonstra várias propriedades CSS em ação:
+- Border com estilo dashed
+- Background-color personalizado
+- Padding para espaçamento interno
+- Border-radius para cantos arredondados
+- Outline none para remover borda de foco padrão
+                    </textarea>
+                </div>
+            </section>
+
+            <!-- Dimensões e Tamanho -->
+            <section class="property-section">
+                <h2 class="section-title">📏 Dimensões e Tamanho</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">width</div>
+                        <div>Define a largura do elemento</div>
+                        <div class="values">px, %, em, rem, vw, auto</div>
+                        <div>
+                            <strong>px:</strong> Pixels fixos<br>
+                            <strong>%:</strong> Relativo ao elemento pai<br>
+                            <strong>em:</strong> Relativo ao font-size do elemento<br>
+                            <strong>rem:</strong> Relativo ao font-size do root<br>
+                            <strong>vw:</strong> Viewport width (1vw = 1% da largura da tela)<br>
+                            <strong>auto:</strong> Valor automático
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">height</div>
+                        <div>Define a altura do elemento</div>
+                        <div class="values">px, %, em, rem, vh, auto</div>
+                        <div>
+                            <strong>vh:</strong> Viewport height (1vh = 1% da altura da tela)<br>
+                            <strong>auto:</strong> Altura automática baseada no conteúdo<br>
+                            Outros valores iguais ao width
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">min-width</div>
+                        <div>Define a largura mínima</div>
+                        <div class="values">px, %, em, rem, 0</div>
+                        <div>
+                            Impede que o elemento seja menor que o valor especificado<br>
+                            <strong>0:</strong> Sem largura mínima
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">max-width</div>
+                        <div>Define a largura máxima</div>
+                        <div class="values">px, %, em, rem, none</div>
+                        <div>
+                            Impede que o elemento seja maior que o valor especificado<br>
+                            <strong>none:</strong> Sem limite de largura máxima
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">min-height</div>
+                        <div>Define a altura mínima</div>
+                        <div class="values">px, %, em, rem, vh, 0</div>
+                        <div>
+                            Útil para garantir altura mínima mesmo com pouco conteúdo<br>
+                            <strong>0:</strong> Sem altura mínima
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">max-height</div>
+                        <div>Define a altura máxima</div>
+                        <div class="values">px, %, em, rem, vh, none</div>
+                        <div>
+                            Combina com overflow para controlar conteúdo que excede<br>
+                            <strong>none:</strong> Sem limite de altura máxima
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Espaçamento -->
+            <section class="property-section">
+                <h2 class="section-title">📦 Espaçamento</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">padding</div>
+                        <div>Espaçamento interno entre conteúdo e borda</div>
+                        <div class="values">px, em, rem, %, "10px 20px"</div>
+                        <div>
+                            <strong>1 valor:</strong> Aplica a todos os lados<br>
+                            <strong>2 valores:</strong> vertical horizontal<br>
+                            <strong>3 valores:</strong> top horizontal bottom<br>
+                            <strong>4 valores:</strong> top right bottom left
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">margin</div>
+                        <div>Espaçamento externo do elemento</div>
+                        <div class="values">px, em, rem, %, auto, "10px 0"</div>
+                        <div>
+                            <strong>auto:</strong> Centraliza horizontalmente (com width definido)<br>
+                            <strong>Valores negativos:</strong> Permitidos para sobreposição<br>
+                            Mesma sintaxe do padding para múltiplos valores
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">box-sizing</div>
+                        <div>Como o tamanho total é calculado</div>
+                        <div class="values">content-box, border-box</div>
+                        <div>
+                            <strong>content-box:</strong> Padrão, padding e border são adicionais<br>
+                            <strong>border-box:</strong> Padding e border inclusos no width/height
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bordas -->
+            <section class="property-section">
+                <h2 class="section-title">🔲 Bordas</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">border</div>
+                        <div>Define borda (espessura, estilo, cor)</div>
+                        <div class="values">"1px solid #000", "2px dashed red"</div>
+                        <div>
+                            <strong>solid:</strong> Linha reta e contínua<br>
+                            <strong>dashed:</strong> Traços curtos separados<br>
+                            <strong>dotted:</strong> Pequenos pontos<br>
+                            <strong>double:</strong> Duas linhas sólidas<br>
+                            <strong>groove/ridge:</strong> Efeito 3D<br>
+                            <strong>inset/outset:</strong> Efeito pressionado/elevado
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">border-radius</div>
+                        <div>Arredonda os cantos do elemento</div>
+                        <div class="values">px, %, "50%", "10px", "5px 10px"</div>
+                        <div>
+                            <strong>50%:</strong> Círculo perfeito (se width = height)<br>
+                            <strong>1 valor:</strong> Todos os cantos iguais<br>
+                            <strong>2 valores:</strong> top-left/bottom-right e top-right/bottom-left<br>
+                            <strong>4 valores:</strong> top-left, top-right, bottom-right, bottom-left
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">border-width</div>
+                        <div>Espessura da borda</div>
+                        <div class="values">px, em, thin, medium, thick</div>
+                        <div>
+                            <strong>thin:</strong> Borda fina (~1px)<br>
+                            <strong>medium:</strong> Borda média (~3px)<br>
+                            <strong>thick:</strong> Borda grossa (~5px)
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">outline</div>
+                        <div>Contorno quando elemento recebe foco</div>
+                        <div class="values">none, "1px solid blue", auto</div>
+                        <div>
+                            <strong>none:</strong> Remove outline padrão do navegador<br>
+                            <strong>auto:</strong> Outline padrão do navegador<br>
+                            Não afeta o layout (não ocupa espaço)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cores e Fundos -->
+            <section class="property-section">
+                <h2 class="section-title">🎨 Cores e Fundos</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">background-color</div>
+                        <div>Define a cor de fundo</div>
+                        <div class="values">#fff, red, rgb(255,0,0), rgba(255,0,0,0.5)</div>
+                        <div>
+                            <strong>Hexadecimal:</strong> #ff0000 ou #f00<br>
+                            <strong>RGB:</strong> rgb(255, 0, 0)<br>
+                            <strong>RGBA:</strong> rgb com transparência (0-1)<br>
+                            <strong>HSL:</strong> hsl(0, 100%, 50%)<br>
+                            <strong>transparent:</strong> Completamente transparente
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">color</div>
+                        <div>Define a cor do texto</div>
+                        <div class="values">#000, blue, rgb(0,0,0), inherit</div>
+                        <div>
+                            <strong>inherit:</strong> Herda a cor do elemento pai<br>
+                            <strong>currentColor:</strong> Usa a cor atual do elemento<br>
+                            Mesmos formatos de cor do background-color
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">opacity</div>
+                        <div>Transparência do elemento (0 a 1)</div>
+                        <div class="values">0, 0.5, 1, 0.8</div>
+                        <div>
+                            <strong>0:</strong> Completamente transparente<br>
+                            <strong>1:</strong> Completamente opaco<br>
+                            <strong>0.5:</strong> 50% transparente<br>
+                            Afeta todo o elemento e seus filhos
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tipografia -->
+            <section class="property-section">
+                <h2 class="section-title">📝 Tipografia</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">font-family</div>
+                        <div>Define a família da fonte</div>
+                        <div class="values">Arial, serif, sans-serif, inherit</div>
+                        <div>
+                            <strong>serif:</strong> Fontes com serifa (Times, Georgia)<br>
+                            <strong>sans-serif:</strong> Fontes sem serifa (Arial, Helvetica)<br>
+                            <strong>monospace:</strong> Largura fixa (Courier, Monaco)<br>
+                            <strong>cursive:</strong> Fontes cursivas<br>
+                            Use fallbacks: "Arial, Helvetica, sans-serif"
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">font-size</div>
+                        <div>Define o tamanho da fonte</div>
+                        <div class="values">px, em, rem, %, small, large</div>
+                        <div>
+                            <strong>xx-small a xx-large:</strong> Tamanhos predefinidos<br>
+                            <strong>smaller/larger:</strong> Relativo ao elemento pai<br>
+                            <strong>rem:</strong> Recomendado para responsividade
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">font-weight</div>
+                        <div>Define o peso da fonte</div>
+                        <div class="values">normal, bold, 100-900</div>
+                        <div>
+                            <strong>normal:</strong> Peso padrão (400)<br>
+                            <strong>bold:</strong> Negrito (700)<br>
+                            <strong>100-900:</strong> Níveis de peso específicos<br>
+                            <strong>lighter/bolder:</strong> Relativo ao pai
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">line-height</div>
+                        <div>Define a altura da linha do texto</div>
+                        <div class="values">number, px, %, 1.5, 24px</div>
+                        <div>
+                            <strong>Número:</strong> Multiplicador do font-size (recomendado)<br>
+                            <strong>1.2-1.6:</strong> Valores comuns para legibilidade<br>
+                            <strong>normal:</strong> Valor padrão do navegador
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">text-align</div>
+                        <div>Alinha o texto horizontalmente</div>
+                        <div class="values">left, center, right, justify</div>
+                        <div>
+                            <strong>left:</strong> Alinhado à esquerda<br>
+                            <strong>center:</strong> Centralizado<br>
+                            <strong>right:</strong> Alinhado à direita<br>
+                            <strong>justify:</strong> Justificado (espaçamento uniforme)
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Layout e Posicionamento -->
+            <section class="property-section">
+                <h2 class="section-title">📐 Layout e Posicionamento</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">display</div>
+                        <div>Como o elemento é exibido</div>
+                        <div class="values">block, inline, flex, grid, none</div>
+                        <div>
+                            <strong>block:</strong> Ocupa toda largura disponível<br>
+                            <strong>inline:</strong> Na mesma linha, width/height ignorados<br>
+                            <strong>inline-block:</strong> Inline mas aceita width/height<br>
+                            <strong>flex:</strong> Container flexível<br>
+                            <strong>grid:</strong> Container de grid<br>
+                            <strong>none:</strong> Remove do layout
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">position</div>
+                        <div>Tipo de posicionamento</div>
+                        <div class="values">static, relative, absolute, fixed, sticky</div>
+                        <div>
+                            <strong>static:</strong> Fluxo normal (padrão)<br>
+                            <strong>relative:</strong> Relativo à posição original<br>
+                            <strong>absolute:</strong> Relativo ao ancestral posicionado<br>
+                            <strong>fixed:</strong> Relativo à viewport<br>
+                            <strong>sticky:</strong> Combinação de relative e fixed
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">z-index</div>
+                        <div>Ordem de empilhamento</div>
+                        <div class="values">auto, 1, 10, 999, -1</div>
+                        <div>
+                            <strong>auto:</strong> Ordem natural<br>
+                            <strong>Números positivos:</strong> Mais próximo do usuário<br>
+                            <strong>Números negativos:</strong> Mais distante<br>
+                            Só funciona em elementos posicionados
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">overflow</div>
+                        <div>Controla conteúdo que excede o tamanho</div>
+                        <div class="values">visible, hidden, scroll, auto</div>
+                        <div>
+                            <strong>visible:</strong> Conteúdo vaza (padrão)<br>
+                            <strong>hidden:</strong> Conteúdo é cortado<br>
+                            <strong>scroll:</strong> Sempre mostra scrollbar<br>
+                            <strong>auto:</strong> Scrollbar apenas quando necessário
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">float</div>
+                        <div>Flutuação do elemento</div>
+                        <div class="values">left, right, none</div>
+                        <div>
+                            <strong>left:</strong> Flutua à esquerda<br>
+                            <strong>right:</strong> Flutua à direita<br>
+                            <strong>none:</strong> Sem flutuação<br>
+                            Elemento sai do fluxo normal
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flexbox -->
+            <section class="property-section">
+                <h2 class="section-title">🔄 Flexbox</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">flex-direction</div>
+                        <div>Direção dos itens flex</div>
+                        <div class="values">row, column, row-reverse, column-reverse</div>
+                        <div>
+                            <strong>row:</strong> Horizontal, da esquerda para direita<br>
+                            <strong>column:</strong> Vertical, de cima para baixo<br>
+                            <strong>*-reverse:</strong> Inverte a direção
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">justify-content</div>
+                        <div>Alinhamento no eixo principal</div>
+                        <div class="values">flex-start, center, flex-end, space-between</div>
+                        <div>
+                            <strong>flex-start:</strong> Início do container<br>
+                            <strong>center:</strong> Centro do container<br>
+                            <strong>space-between:</strong> Espaçamento entre itens<br>
+                            <strong>space-around:</strong> Espaçamento ao redor dos itens
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">align-items</div>
+                        <div>Alinhamento no eixo transversal</div>
+                        <div class="values">stretch, flex-start, center, flex-end</div>
+                        <div>
+                            <strong>stretch:</strong> Estica para preencher altura<br>
+                            <strong>baseline:</strong> Alinha pela linha base do texto
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">flex-wrap</div>
+                        <div>Quebra de linha dos itens</div>
+                        <div class="values">nowrap, wrap, wrap-reverse</div>
+                        <div>
+                            <strong>nowrap:</strong> Todos na mesma linha<br>
+                            <strong>wrap:</strong> Quebra linha quando necessário<br>
+                            <strong>wrap-reverse:</strong> Quebra linha em ordem inversa
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Efeitos e Interação -->
+            <section class="property-section">
+                <h2 class="section-title">✨ Efeitos e Interação</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">transition</div>
+                        <div>Animação suave nas mudanças</div>
+                        <div class="values">"all 0.3s ease", "opacity 0.5s linear"</div>
+                        <div>
+                            <strong>Propriedade:</strong> all, opacity, transform, etc.<br>
+                            <strong>Duração:</strong> 0.3s, 300ms<br>
+                            <strong>Timing:</strong> ease, linear, ease-in, ease-out<br>
+                            <strong>Delay:</strong> 0.1s (opcional)
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">transform</div>
+                        <div>Transforma o elemento</div>
+                        <div class="values">scale(1.1), rotate(45deg), translate(10px)</div>
+                        <div>
+                            <strong>scale():</strong> Redimensiona<br>
+                            <strong>rotate():</strong> Rotaciona<br>
+                            <strong>translate():</strong> Move<br>
+                            <strong>skew():</strong> Inclina<br>
+                            Pode combinar: "scale(1.1) rotate(10deg)"
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">box-shadow</div>
+                        <div>Adiciona sombra ao elemento</div>
+                        <div class="values">"0 2px 4px rgba(0,0,0,0.1)", none</div>
+                        <div>
+                            <strong>Sintaxe:</strong> x y blur spread color<br>
+                            <strong>inset:</strong> Sombra interna<br>
+                            <strong>Múltiplas:</strong> Separadas por vírgula<br>
+                            Exemplo: "0 2px 4px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1)"
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">cursor</div>
+                        <div>Tipo de cursor ao passar sobre elemento</div>
+                        <div class="values">pointer, default, text, not-allowed</div>
+                        <div>
+                            <strong>pointer:</strong> Mãozinha (para clicáveis)<br>
+                            <strong>text:</strong> Cursor de texto<br>
+                            <strong>grab/grabbing:</strong> Para elementos arrastáveis<br>
+                            <strong>help:</strong> Ponto de interrogação<br>
+                            <strong>wait:</strong> Ampulheta
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Controles de Formulário -->
+            <section class="property-section">
+                <h2 class="section-title">📋 Controles de Formulário</h2>
+                <div class="property-table">
+                    <div class="table-header">
+                        <div>Propriedade</div>
+                        <div>Descrição</div>
+                        <div>Valores</div>
+                        <div>Detalhes</div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">resize</div>
+                        <div>Controla redimensionamento pelo usuário</div>
+                        <div class="values">none, both, horizontal, vertical</div>
+                        <div>
+                            <strong>none:</strong> Não permite redimensionamento<br>
+                            <strong>both:</strong> Permite redimensionar em ambas direções<br>
+                            <strong>horizontal:</strong> Apenas largura<br>
+                            <strong>vertical:</strong> Apenas altura
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">white-space</div>
+                        <div>Tratamento de espaços em branco</div>
+                        <div class="values">normal, nowrap, pre, pre-wrap</div>
+                        <div>
+                            <strong>normal:</strong> Colapsa espaços, quebra linhas<br>
+                            <strong>nowrap:</strong> Não quebra linhas<br>
+                            <strong>pre:</strong> Preserva espaços e quebras<br>
+                            <strong>pre-wrap:</strong> Preserva espaços, quebra se necessário
+                        </div>
+                    </div>
+                    
+                    <div class="property-row">
+                        <div class="property-name">word-wrap</div>
+                        <div>Quebra de palavras longas</div>
+                        <div class="values">normal, break-word, anywhere</div>
+                        <div>
+                            <strong>normal:</strong> Quebra apenas em espaços<br>
+                            <strong>break-word:</strong> Quebra palavras se necessário<br>
+                            <strong>anywhere:</strong> Quebra em qualquer lugar
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
